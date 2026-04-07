@@ -153,10 +153,13 @@
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
-                        <h3>OpenWebUI</h3>
+                        <h3>OpenWebUI Preference Collection and Preference-Driven LLM Routing</h3>
                         <span class="exp-date">2025</span>
                     </div>
-                    <p>Participated in LLM application practice and interface/system-level experimentation.</p>
+                    <p>This project focused on <strong>secondary development of OpenWebUI for preference data collection and preference-driven model routing</strong>, with my main work centered on the design of an <strong>LLM router</strong> for dual-output comparison workflows. Instead of treating OpenWebUI only as a chat frontend, the system was extended into a research-oriented routing and evaluation platform for collecting high-quality human preference signals under realistic usage conditions.</p>
+                    <p>Technically, the project built on OpenWebUI's native <strong>Multi-Model Chats</strong> and <strong>Evaluation/Arena</strong> capabilities, and further designed two routing modes: <strong>Pinned Battle</strong> (user selects model A while the system injects a sampled competitor B) and <strong>full dual-output routing</strong> (all requests sample A/B pairs from a model pool). The routing design emphasized <strong>anonymous comparison</strong>, <strong>left-right position randomization</strong>, <strong>closed-loop voting</strong>, <strong>event-level logging schema</strong>, and <strong>bucketed experimentation</strong> to reduce bias and make collected preferences suitable for downstream router training.</p>
+                    <p>I also studied how to connect online preference collection with offline router optimization under practical constraints such as <strong>quality-cost-latency trade-offs</strong>. The workflow incorporated ideas such as <strong>Fast Mode</strong>, replayable evaluation infrastructure, and pairwise preference aggregation inspired by <strong>Bradley-Terry style ranking</strong>, with the goal of training or calibrating routing strategies that achieve better Pareto performance in real deployments.</p>
+                    <p>Overall, this work gave me hands-on experience in <strong>LLM routing</strong>, <strong>human preference data pipelines</strong>, <strong>evaluation protocol design</strong>, and <strong>OpenWebUI-based system customization</strong>, bridging research methodology with practical product constraints in multi-model LLM systems.</p>
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
