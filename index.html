@@ -161,9 +161,12 @@
                 <div class="experience-item">
                     <div class="exp-header">
                         <h3>Intelligent Monitoring of Rapeseed Across the Full Growth Cycle Based on 3D Point Clouds</h3>
-                        <span class="exp-date">2025</span>
+                        <span class="exp-date">2025 - 2026</span>
                     </div>
-                    <p>Worked on 3D point cloud modeling for crop monitoring, segmentation, and quantitative analysis.</p>
+                    <p>This project focused on <strong>3D point-cloud-based phenotyping and structural analysis of rapeseed across the full growth cycle</strong>, aiming to replace low-efficiency manual measurements with an automated and fine-grained plant monitoring pipeline. The system targeted challenging stages such as dense foliage, flowering, and pod development, where occlusion and complex geometry make accurate analysis difficult.</p>
+                    <p>Technically, the pipeline integrated <strong>3D reconstruction</strong>, <strong>semantic segmentation</strong>, <strong>instance segmentation</strong>, and <strong>skeleton extraction</strong>. For organ-level parsing, the project adopted a <strong>PointNet++-based semantic segmentation</strong> approach to classify leaves, stems, flowers, and siliques by leveraging hierarchical local feature extraction under varying point densities. To separate individual organs of the same category, a <strong>PointGroup-style instance segmentation</strong> design with dual-branch feature extraction and dual-coordinate clustering was used to improve separation in dense and overlapping plant structures.</p>
+                    <p>For higher-level structural understanding, the project explored a hybrid <strong>Point2Skeleton + Mamba</strong> framework for point-cloud skeletonization, combining geometric awareness with long-range sequence modeling. This design aimed to improve the accuracy, robustness, and efficiency of skeleton extraction, making it possible to better capture plant topology and growth patterns from raw 3D data.</p>
+                    <p>Overall, this work emphasized the technical development of a full-stack 3D plant analysis framework for rapeseed, covering data acquisition, denoising and alignment, organ-aware segmentation, and topology-oriented structural modeling, with potential applications in phenotyping, crop monitoring, and yield-related trait analysis.</p>
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
