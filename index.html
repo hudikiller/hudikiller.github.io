@@ -153,7 +153,12 @@
                     <p><strong>CURE-Bench</strong> is a benchmark and competition for evaluating AI systems in clinically grounded drug decision-making and treatment planning, including treatment recommendation, drug safety and efficacy assessment, treatment design, and drug repurposing for diseases with limited therapeutic options.</p>
                     <p>My main contribution was the <strong>construction of the knowledge base</strong> for the proposed <strong>AgentKB</strong> framework. Following the paper's <strong>Reason-Retrieve-Refine (3R)</strong> pipeline, I adapted the student model to parse structured fields such as <em>question</em>, <em>answer</em>, <em>prediction</em>, and <em>drug-infos</em>, and generated intermediate outputs using the prompting strategy described in the paper.</p>
                     <p>Based on the student-stage outputs, I then used the teacher model to integrate <em>question</em>, <em>answer</em>, and <em>reasoning</em> fields together with the student's results, producing structured knowledge entries containing <strong>agent-plan</strong> and <strong>agent-experience</strong>. These entries formed the final knowledge base used by the agent system for cross-task retrieval and plan refinement.</p>
-                    <p>This work transformed raw execution traces into reusable task-solving knowledge, improving the agent's ability to retrieve workflow-level templates and execution-level details for complex therapeutic reasoning tasks.</p>
+                    <p class="project-tags">
+                        <span class="tag">LLM Agents</span>
+                        <span class="tag">Knowledge Base</span>
+                        <span class="tag">Clinical Reasoning</span>
+                        <span class="tag">Benchmarking</span>
+                    </p>
                 </div>
                 <div class="experience-item featured-item">
                     <div class="exp-header">
@@ -163,7 +168,12 @@
                     <p>This project focused on <strong>secondary development of OpenWebUI for preference data collection and preference-driven model routing</strong>, with my main work centered on the design of an <strong>LLM router</strong> for dual-output comparison workflows. Rather than treating OpenWebUI only as a chat frontend, I extended it into a research-oriented routing and evaluation platform for collecting high-quality human preference signals under realistic usage conditions.</p>
                     <p>Technically, the project built on OpenWebUI's native <strong>Multi-Model Chats</strong> and <strong>Evaluation/Arena</strong> capabilities, and further designed two routing modes: <strong>Pinned Battle</strong> (user selects model A while the system injects a sampled competitor B) and <strong>full dual-output routing</strong> (all requests sample A/B pairs from a model pool). The routing design emphasized <strong>anonymous comparison</strong>, <strong>left-right position randomization</strong>, <strong>closed-loop voting</strong>, <strong>event-level logging schema</strong>, and <strong>bucketed experimentation</strong> to reduce bias and make collected preferences suitable for downstream router training.</p>
                     <p>I also studied how to connect online preference collection with offline router optimization under practical constraints such as <strong>quality-cost-latency trade-offs</strong>. The workflow incorporated ideas such as <strong>Fast Mode</strong>, replayable evaluation infrastructure, and pairwise preference aggregation inspired by <strong>Bradley-Terry style ranking</strong>, with the goal of training or calibrating routing strategies that achieve better Pareto performance in real deployments.</p>
-                    <p>Overall, this work gave me hands-on experience in <strong>LLM routing</strong>, <strong>human preference data pipelines</strong>, <strong>evaluation protocol design</strong>, and <strong>OpenWebUI-based system customization</strong>, bridging research methodology with practical product constraints in multi-model LLM systems.</p>
+                    <p class="project-tags">
+                        <span class="tag">LLM Routing</span>
+                        <span class="tag">Preference Data</span>
+                        <span class="tag">OpenWebUI</span>
+                        <span class="tag">Evaluation Systems</span>
+                    </p>
                 </div>
                 <div class="experience-item featured-item">
                     <div class="exp-header">
@@ -173,7 +183,12 @@
                     <p>This project aimed to build a <strong>fully domestic large model for Traditional Chinese Medicine (TCM)</strong> to support the full pipeline of <strong>cultivation, research, and clinical diagnosis</strong>. The system addressed key challenges in TCM AI, including dependence on foreign compute infrastructure, heterogeneous multimodal data, fragmented knowledge systems, and hallucination risks in clinical decision support.</p>
                     <p>My main contributions focused on <strong>knowledge graph construction</strong> and the <strong>RAG/GraphRAG pipeline</strong>. Using <strong>DeepSeek-R1-32B</strong>, I participated in organizing and structuring a large-scale TCM knowledge base covering <strong>140,000 data entries</strong> and more than <strong>300 classical medical books</strong>. I worked on connecting heterogeneous sources such as ancient texts, clinical knowledge, and domain-specific medical resources into a retrieval-augmented framework that could better support reasoning and evidence grounding.</p>
                     <p>Technically, the project combined a domestic computing stack with knowledge graph construction, graph-enhanced retrieval, and explainable reasoning for TCM scenarios. The resulting system supported clinically relevant tasks such as syndrome reasoning, formula recommendation, and evidence-supported treatment assistance, and was demonstrated through a working <strong>demo system</strong>.</p>
-                    <p>The project received <strong>Third Prize</strong> in the <strong>2025 Huawei Ascend AI Innovation Competition (Southwest Regional)</strong> and <strong>National Third Prize</strong> in the <strong>19th Challenge Cup National College Student Extracurricular Academic Science and Technology Competition (AI Special Track)</strong>. It also advanced toward real-world deployment through collaboration with <strong>Shanghai Kunzhou Biotechnology Co., Ltd.</strong></p>
+                    <p class="project-tags">
+                        <span class="tag">Knowledge Graph</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">GraphRAG</span>
+                        <span class="tag">DeepSeek-R1-32B</span>
+                    </p>
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
@@ -234,13 +249,15 @@
 
             <section id="awards">
                 <h2><i class="fas fa-trophy section-icon"></i> Awards &amp; Achievements</h2>
-                <div class="experience-item"><p>Outstanding Winner (O Award), 13th MathorCup Mathematical Contest in Modeling, 2024</p></div>
-                <div class="experience-item"><p>National Third Prize, The 19th Challenge Cup National Extracurricular Academic Science and Technology Competition, AI Special Track</p></div>
-                <div class="experience-item"><p>3 Invention Patents (2 as first author)</p></div>
-                <div class="experience-item"><p>1 Utility Model Patent (first author)</p></div>
-                <div class="experience-item"><p>1 National Software Copyright</p></div>
-                <div class="experience-item"><p>Provincial Third Prize, 17th Chinese Collegiate Computer Design Competition</p></div>
-                <div class="experience-item"><p>Third Prize, Ascend AI Innovation Competition 2025 Southwest Regional Contest</p></div>
+                <div class="awards-grid">
+                    <div class="award-card"><p>Outstanding Winner (O Award), 13th MathorCup Mathematical Contest in Modeling, 2024</p></div>
+                    <div class="award-card"><p>National Third Prize, The 19th Challenge Cup National Extracurricular Academic Science and Technology Competition, AI Special Track</p></div>
+                    <div class="award-card"><p>3 Invention Patents (2 as first author)</p></div>
+                    <div class="award-card"><p>1 Utility Model Patent (first author)</p></div>
+                    <div class="award-card"><p>1 National Software Copyright</p></div>
+                    <div class="award-card"><p>Provincial Third Prize, 17th Chinese Collegiate Computer Design Competition</p></div>
+                    <div class="award-card"><p>Third Prize, Ascend AI Innovation Competition 2025 Southwest Regional Contest</p></div>
+                </div>
             </section>
 
             <section id="skills">
@@ -282,7 +299,7 @@
             </section>
 
             <footer>
-                <p>&copy; 2026 Di Hu. Academic homepage for research collaboration and RA applications. Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+                <p>&copy; 2026 Di Hu. Academic homepage for research collaboration and RA applications. Powered by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
             </footer>
         </main>
     </div>
