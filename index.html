@@ -146,7 +146,10 @@
                         <h3>CURE-Bench @ NeurIPS 2025</h3>
                         <span class="exp-date">2025</span>
                     </div>
-                    <p>Contributed to benchmark-related research work.</p>
+                    <p><strong>CURE-Bench</strong> is a benchmark and competition for evaluating AI systems in clinically grounded drug decision-making and treatment planning, including treatment recommendation, drug safety and efficacy assessment, treatment design, and drug repurposing for diseases with limited therapeutic options.</p>
+                    <p>In this project, I mainly worked on the <strong>construction of the knowledge base</strong> for the proposed <strong>AgentKB</strong> framework. Following the paper's <strong>Reason-Retrieve-Refine (3R)</strong> pipeline, I adapted the student model to parse and understand structured fields such as <em>question</em>, <em>answer</em>, <em>prediction</em>, and <em>drug-infos</em>, and then generated intermediate outputs using the prompt design described in the paper.</p>
+                    <p>Based on the student-stage outputs, I further used the teacher model to integrate <em>question</em>, <em>answer</em>, and <em>reasoning</em> fields together with the paper's prompting strategy, producing structured knowledge entries containing <strong>agent-plan</strong> and <strong>agent-experience</strong>. These entries formed the final knowledge base used by the agent system for cross-task experience retrieval and plan refinement.</p>
+                    <p>This work helped transform raw execution records into reusable task-solving knowledge, enabling the agent to better retrieve workflow-level templates and execution-level details for complex therapeutic reasoning tasks.</p>
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
