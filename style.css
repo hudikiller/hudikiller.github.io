@@ -344,6 +344,7 @@ p {
     font-style: italic;
 }
 
+
 /* Experience */
 .experience-item {
     padding: 1rem 0;
@@ -359,6 +360,24 @@ p {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 0.4rem;
+}
+
+.section-lead {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.featured-item {
+    background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.featured-item .exp-header h3 {
+    color: #0f172a;
 }
 
 .exp-header h3 {
