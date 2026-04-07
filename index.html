@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Di Hu - Academic Homepage</title>
-    <meta name="description" content="Di Hu's academic homepage. Undergraduate researcher interested in LAG, multimodal models, agricultural AI, and privacy-preserving learning.">
-    <meta name="keywords" content="Di Hu, LLM, multimodal, agricultural AI, Hong Kong RA, academic homepage">
+    <meta name="description" content="Di Hu's academic homepage. Undergraduate researcher working on LLMs, multimodal AI, AI systems, and agricultural intelligence.">
+    <meta name="keywords" content="Di Hu, LLM, multimodal AI, AI systems, agricultural AI, Hong Kong RA, academic homepage">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -36,25 +36,24 @@
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I am <strong>Di Hu</strong>, an undergraduate student in <strong>Data Science and Big Data Technology</strong>
+                    I am <strong>Di Hu</strong>, an undergraduate researcher in <strong>Data Science and Big Data Technology</strong>
                     at <a href="https://english.sicau.edu.cn/" target="_blank">Sichuan Agricultural University</a>, Ya'an, China.
-                    My work spans <strong>large language models</strong>, <strong>multimodal intelligence</strong>,
-                    <strong>privacy-preserving learning</strong>, and <strong>AI for agriculture</strong>.
+                    My research interests lie in <strong>large language models</strong>, <strong>multimodal AI</strong>,
+                    <strong>AI systems</strong>, and <strong>AI for agriculture and healthcare</strong>.
                 </p>
                 <p>
-                    I have participated in multiple research projects and laboratory activities, with experience in
-                    benchmark construction, multimodal understanding, point cloud analysis, remote sensing segmentation,
-                    and domain-specific foundation models. I am especially interested in building practical and robust AI systems
-                    that connect model capability with real-world applications.
+                    My recent work spans <strong>benchmark construction</strong>, <strong>knowledge graph and RAG systems</strong>,
+                    <strong>preference-driven model routing</strong>, <strong>3D point cloud understanding</strong>, and
+                    <strong>remote sensing segmentation</strong>. I am particularly interested in building practical, reliable,
+                    and research-oriented AI systems that connect advanced models with real-world decision-making tasks.
                 </p>
                 <p>
                     I am actively seeking <strong>Research Assistant (RA)</strong> opportunities in <strong>Hong Kong</strong>
-                    to further strengthen my research training and contribute to cutting-edge work in LLMs, multimodal AI,
-                    and embodied or scientific applications.
+                    starting in <strong>2026</strong>, especially in LLMs, multimodal intelligence, AI systems, and applied machine learning.
                 </p>
                 <p class="highlight-box">
                     <i class="fas fa-search"></i> <strong>Open to Hong Kong RA opportunities from 2026.</strong>
-                    Please feel free to contact me for collaboration, research, or interview opportunities.
+                    Please feel free to contact me for research collaboration, interviews, or related opportunities.
                 </p>
             </section>
 
@@ -122,6 +121,70 @@
                 <h2><i class="fas fa-flask section-icon"></i> Research &amp; Project Experience</h2>
                 <div class="experience-item">
                     <div class="exp-header">
+                        <h3>CURE-Bench @ NeurIPS 2025</h3>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p><strong>CURE-Bench</strong> is a benchmark and competition for evaluating AI systems in clinically grounded drug decision-making and treatment planning, including treatment recommendation, drug safety and efficacy assessment, treatment design, and drug repurposing for diseases with limited therapeutic options.</p>
+                    <p>My main contribution was the <strong>construction of the knowledge base</strong> for the proposed <strong>AgentKB</strong> framework. Following the paper's <strong>Reason-Retrieve-Refine (3R)</strong> pipeline, I adapted the student model to parse structured fields such as <em>question</em>, <em>answer</em>, <em>prediction</em>, and <em>drug-infos</em>, and generated intermediate outputs using the prompting strategy described in the paper.</p>
+                    <p>Based on the student-stage outputs, I then used the teacher model to integrate <em>question</em>, <em>answer</em>, and <em>reasoning</em> fields together with the student's results, producing structured knowledge entries containing <strong>agent-plan</strong> and <strong>agent-experience</strong>. These entries formed the final knowledge base used by the agent system for cross-task retrieval and plan refinement.</p>
+                    <p>This work transformed raw execution traces into reusable task-solving knowledge, improving the agent's ability to retrieve workflow-level templates and execution-level details for complex therapeutic reasoning tasks.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>OpenWebUI Preference Collection and Preference-Driven LLM Routing</h3>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p>This project focused on <strong>secondary development of OpenWebUI for preference data collection and preference-driven model routing</strong>, with my main work centered on the design of an <strong>LLM router</strong> for dual-output comparison workflows. Rather than treating OpenWebUI only as a chat frontend, I extended it into a research-oriented routing and evaluation platform for collecting high-quality human preference signals under realistic usage conditions.</p>
+                    <p>Technically, the project built on OpenWebUI's native <strong>Multi-Model Chats</strong> and <strong>Evaluation/Arena</strong> capabilities, and further designed two routing modes: <strong>Pinned Battle</strong> (user selects model A while the system injects a sampled competitor B) and <strong>full dual-output routing</strong> (all requests sample A/B pairs from a model pool). The routing design emphasized <strong>anonymous comparison</strong>, <strong>left-right position randomization</strong>, <strong>closed-loop voting</strong>, <strong>event-level logging schema</strong>, and <strong>bucketed experimentation</strong> to reduce bias and make collected preferences suitable for downstream router training.</p>
+                    <p>I also studied how to connect online preference collection with offline router optimization under practical constraints such as <strong>quality-cost-latency trade-offs</strong>. The workflow incorporated ideas such as <strong>Fast Mode</strong>, replayable evaluation infrastructure, and pairwise preference aggregation inspired by <strong>Bradley-Terry style ranking</strong>, with the goal of training or calibrating routing strategies that achieve better Pareto performance in real deployments.</p>
+                    <p>Overall, this work gave me hands-on experience in <strong>LLM routing</strong>, <strong>human preference data pipelines</strong>, <strong>evaluation protocol design</strong>, and <strong>OpenWebUI-based system customization</strong>, bridging research methodology with practical product constraints in multi-model LLM systems.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Fully Domestic Traditional Chinese Medicine Large Model</h3>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p>This project aimed to build a <strong>fully domestic large model for Traditional Chinese Medicine (TCM)</strong> to support the full pipeline of <strong>cultivation, research, and clinical diagnosis</strong>. The system addressed key challenges in TCM AI, including dependence on foreign compute infrastructure, heterogeneous multimodal data, fragmented knowledge systems, and hallucination risks in clinical decision support.</p>
+                    <p>My main contributions focused on <strong>knowledge graph construction</strong> and the <strong>RAG/GraphRAG pipeline</strong>. Using <strong>DeepSeek-R1-32B</strong>, I participated in organizing and structuring a large-scale TCM knowledge base covering <strong>140,000 data entries</strong> and more than <strong>300 classical medical books</strong>. I worked on connecting heterogeneous sources such as ancient texts, clinical knowledge, and domain-specific medical resources into a retrieval-augmented framework that could better support reasoning and evidence grounding.</p>
+                    <p>Technically, the project combined a domestic computing stack with knowledge graph construction, graph-enhanced retrieval, and explainable reasoning for TCM scenarios. The resulting system supported clinically relevant tasks such as syndrome reasoning, formula recommendation, and evidence-supported treatment assistance, and was demonstrated through a working <strong>demo system</strong>.</p>
+                    <p>The project received <strong>Third Prize</strong> in the <strong>2025 Huawei Ascend AI Innovation Competition (Southwest Regional)</strong> and <strong>National Third Prize</strong> in the <strong>19th Challenge Cup National College Student Extracurricular Academic Science and Technology Competition (AI Special Track)</strong>. It also advanced toward real-world deployment through collaboration with <strong>Shanghai Kunzhou Biotechnology Co., Ltd.</strong></p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Intelligent Monitoring of Rapeseed Across the Full Growth Cycle Based on 3D Point Clouds</h3>
+                        <span class="exp-date">2025 - 2026</span>
+                    </div>
+                    <p>This project focused on <strong>3D point-cloud-based phenotyping and structural analysis of rapeseed across the full growth cycle</strong>, aiming to replace low-efficiency manual measurements with an automated and fine-grained plant monitoring pipeline. The system targeted challenging stages such as dense foliage, flowering, and pod development, where occlusion and complex geometry make accurate analysis difficult.</p>
+                    <p>I independently carried out the core technical work of this project, including <strong>dataset construction</strong>, <strong>model design and training</strong>, and implementation of the full analysis pipeline. I built a dedicated <strong>full-growth-cycle rapeseed point cloud dataset</strong> containing <strong>240 samples</strong>, which supported research on 3D reconstruction, organ-level parsing, and structural modeling across different developmental stages.</p>
+                    <p>Technically, I trained and modified both <strong>PointNet++</strong> and <strong>PointGroup-style</strong> models for <strong>semantic segmentation</strong> and <strong>instance segmentation</strong> of rapeseed organs, including leaves, stems, flowers, and siliques. I also explored a hybrid <strong>Point2Skeleton + Mamba</strong> framework for point-cloud skeletonization, combining geometric perception with long-range sequence modeling to better capture plant topology and growth patterns from raw 3D data.</p>
+                    <p>The project formed a full-stack 3D plant analysis workflow covering data acquisition, denoising and alignment, organ-aware segmentation, and topology-oriented structural modeling. It was supported by both the <strong>Undergraduate Research Interest Program</strong> and the <strong>National College Student Innovation and Entrepreneurship Training Program</strong>, and was successfully completed. Related outcomes included a <strong>Provincial Third Prize</strong> in the College Student Innovation and Entrepreneurship Competition and <strong>three invention patents</strong>, including <strong>two as first author</strong>.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Remote Sensing Recognition and Segmentation for Wheat, Rice, and Rapeseed</h3>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p>This project focused on <strong>crop recognition and parcel-level segmentation</strong> for <strong>wheat, rice, and rapeseed</strong> using multi-source remote sensing imagery. The technical pipeline combined <strong>0.5 m high-resolution Jilin-1 satellite images</strong> with <strong>Sentinel-2 multispectral data</strong> to improve both spatial detail and spectral discrimination in agricultural land analysis.</p>
+                    <p>The workflow included <strong>data preprocessing</strong>, remote sensing data organization, and model fine-tuning for semantic segmentation. I used <strong>SegFormer</strong> as the core segmentation model to perform crop identification and land parcel delineation, leveraging its transformer-based architecture for effective multi-scale feature extraction and robust segmentation performance across heterogeneous agricultural scenes.</p>
+                    <p>Beyond model development, the project was integrated into a complete <strong>frontend-backend application workflow</strong>. The final system supported interactive visualization of original imagery and predicted parcel information through a <strong>curtain-style sliding comparison interface</strong>, making it easier to inspect segmentation quality and compare recognition results with the source remote sensing images.</p>
+                    <p>Overall, this work gave me practical experience in <strong>remote sensing data fusion</strong>, <strong>semantic segmentation model fine-tuning</strong>, and the engineering of an end-to-end application that connects geospatial AI models with usable visual analysis tools.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Research Assistant to Dr. M. Ehsan Hoque, Human Experimental Therapeutics Center, University of Rochester</h3>
+                        <span class="exp-date">Remote</span>
+                    </div>
+                    <p>Worked as an <strong>Assistant Researcher</strong> on the project <strong>PARK: Remote Data Collection to Objectively Quantify the Severity of Parkinson's Disease</strong>. Contributed to research support work related to data collection, objective measurement, and AI-assisted analysis in digital health settings.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Dean's Assistant and Research Assistant, Shanghai Kunzhou Biotechnology Co., Ltd.</h3>
+                        <span class="exp-date">2025 - 2026</span>
+                    </div>
+                    <p>Worked as <strong>Dean's Assistant and Research Assistant</strong>, supporting research coordination, project communication, and technical work related to AI and biomedical applications.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
                         <h3>Intern, MAC Lab</h3>
                         <span class="exp-date">2025 - 2026</span>
                     </div>
@@ -140,56 +203,6 @@
                         <span class="exp-date">2024 - 2025</span>
                     </div>
                     <p>Led student laboratory activities and coordinated technical work in data-driven research projects.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>CURE-Bench @ NeurIPS 2025</h3>
-                        <span class="exp-date">2025</span>
-                    </div>
-                    <p><strong>CURE-Bench</strong> is a benchmark and competition for evaluating AI systems in clinically grounded drug decision-making and treatment planning, including treatment recommendation, drug safety and efficacy assessment, treatment design, and drug repurposing for diseases with limited therapeutic options.</p>
-                    <p>In this project, I mainly worked on the <strong>construction of the knowledge base</strong> for the proposed <strong>AgentKB</strong> framework. Following the paper's <strong>Reason-Retrieve-Refine (3R)</strong> pipeline, I adapted the student model to parse and understand structured fields such as <em>question</em>, <em>answer</em>, <em>prediction</em>, and <em>drug-infos</em>, and then generated intermediate outputs using the prompt design described in the paper.</p>
-                    <p>Based on the student-stage outputs, I further used the teacher model to integrate <em>question</em>, <em>answer</em>, and <em>reasoning</em> fields together with the paper's prompting strategy, producing structured knowledge entries containing <strong>agent-plan</strong> and <strong>agent-experience</strong>. These entries formed the final knowledge base used by the agent system for cross-task experience retrieval and plan refinement.</p>
-                    <p>This work helped transform raw execution records into reusable task-solving knowledge, enabling the agent to better retrieve workflow-level templates and execution-level details for complex therapeutic reasoning tasks.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>OpenWebUI Preference Collection and Preference-Driven LLM Routing</h3>
-                        <span class="exp-date">2025</span>
-                    </div>
-                    <p>This project focused on <strong>secondary development of OpenWebUI for preference data collection and preference-driven model routing</strong>, with my main work centered on the design of an <strong>LLM router</strong> for dual-output comparison workflows. Instead of treating OpenWebUI only as a chat frontend, the system was extended into a research-oriented routing and evaluation platform for collecting high-quality human preference signals under realistic usage conditions.</p>
-                    <p>Technically, the project built on OpenWebUI's native <strong>Multi-Model Chats</strong> and <strong>Evaluation/Arena</strong> capabilities, and further designed two routing modes: <strong>Pinned Battle</strong> (user selects model A while the system injects a sampled competitor B) and <strong>full dual-output routing</strong> (all requests sample A/B pairs from a model pool). The routing design emphasized <strong>anonymous comparison</strong>, <strong>left-right position randomization</strong>, <strong>closed-loop voting</strong>, <strong>event-level logging schema</strong>, and <strong>bucketed experimentation</strong> to reduce bias and make collected preferences suitable for downstream router training.</p>
-                    <p>I also studied how to connect online preference collection with offline router optimization under practical constraints such as <strong>quality-cost-latency trade-offs</strong>. The workflow incorporated ideas such as <strong>Fast Mode</strong>, replayable evaluation infrastructure, and pairwise preference aggregation inspired by <strong>Bradley-Terry style ranking</strong>, with the goal of training or calibrating routing strategies that achieve better Pareto performance in real deployments.</p>
-                    <p>Overall, this work gave me hands-on experience in <strong>LLM routing</strong>, <strong>human preference data pipelines</strong>, <strong>evaluation protocol design</strong>, and <strong>OpenWebUI-based system customization</strong>, bridging research methodology with practical product constraints in multi-model LLM systems.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Intelligent Monitoring of Rapeseed Across the Full Growth Cycle Based on 3D Point Clouds</h3>
-                        <span class="exp-date">2025 - 2026</span>
-                    </div>
-                    <p>This project focused on <strong>3D point-cloud-based phenotyping and structural analysis of rapeseed across the full growth cycle</strong>, aiming to replace low-efficiency manual measurements with an automated and fine-grained plant monitoring pipeline. The system targeted challenging stages such as dense foliage, flowering, and pod development, where occlusion and complex geometry make accurate analysis difficult.</p>
-                    <p>I independently carried out the core technical work of this project, including <strong>dataset construction</strong>, <strong>model design and training</strong>, and the implementation of the full analysis pipeline. I built a dedicated <strong>full-growth-cycle rapeseed point cloud dataset</strong> containing <strong>240 samples</strong>, which supported research on 3D reconstruction, organ-level parsing, and structural modeling under different developmental stages.</p>
-                    <p>Technically, I trained and modified both <strong>PointNet++</strong> and <strong>PointGroup-style</strong> models for <strong>semantic segmentation</strong> and <strong>instance segmentation</strong> of rapeseed organs, including leaves, stems, flowers, and siliques. I also explored a hybrid <strong>Point2Skeleton + Mamba</strong> framework for point-cloud skeletonization, combining geometric perception with long-range sequence modeling to better capture plant topology and growth patterns from raw 3D data.</p>
-                    <p>The project formed a full-stack 3D plant analysis workflow covering data acquisition, denoising and alignment, organ-aware segmentation, and topology-oriented structural modeling. It was supported by both the <strong>Undergraduate Research Interest Program</strong> and the <strong>National College Student Innovation and Entrepreneurship Training Program</strong>, and was successfully completed. Related outcomes included a <strong>Provincial Third Prize</strong> in the College Student Innovation and Entrepreneurship Competition and <strong>three invention patents</strong>, including <strong>two as first author</strong>.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Fully Domestic Traditional Chinese Medicine Large Model</h3>
-                        <span class="exp-date">2025</span>
-                    </div>
-                    <p>This project aimed to build a <strong>fully domestic large model for Traditional Chinese Medicine (TCM)</strong> to support the full pipeline of <strong>cultivation, research, and clinical diagnosis</strong>. The system addressed key challenges in TCM AI, including dependence on foreign compute infrastructure, heterogeneous multimodal data, fragmented knowledge systems, and hallucination risks in clinical decision support.</p>
-                    <p>My main contributions focused on <strong>knowledge graph construction</strong> and the <strong>RAG/GraphRAG pipeline</strong>. Using <strong>DeepSeek-R1-32B</strong>, I participated in organizing and structuring a large-scale TCM knowledge base covering <strong>140,000 data entries</strong> and more than <strong>300 classical medical books</strong>. I worked on connecting heterogeneous sources such as ancient texts, clinical knowledge, and domain-specific medical resources into a retrieval-augmented framework that could better support reasoning and evidence grounding.</p>
-                    <p>Technically, the project combined a domestic computing stack with knowledge graph construction, graph-enhanced retrieval, and explainable reasoning for TCM scenarios. The resulting system supported clinically relevant tasks such as syndrome reasoning, formula recommendation, and evidence-supported treatment assistance, and was demonstrated through a working <strong>demo system</strong>.</p>
-                    <p>The project was recognized with <strong>Third Prize</strong> in the <strong>2025 Huawei Ascend AI Innovation Competition (Southwest Regional)</strong> and <strong>National Third Prize</strong> in the <strong>19th Challenge Cup National College Student Extracurricular Academic Science and Technology Competition (AI Special Track)</strong>. It also advanced toward real-world deployment through collaboration with <strong>Shanghai Kunzhou Biotechnology Co., Ltd.</strong></p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Remote Sensing Recognition and Segmentation for Wheat, Rice, and Rapeseed</h3>
-                        <span class="exp-date">2025</span>
-                    </div>
-                    <p>This project focused on <strong>crop recognition and parcel-level segmentation</strong> for <strong>wheat, rice, and rapeseed</strong> using multi-source remote sensing imagery. The technical pipeline combined <strong>0.5 m high-resolution Jilin-1 satellite images</strong> with <strong>Sentinel-2 multispectral data</strong> to improve both spatial detail and spectral discrimination in agricultural land analysis.</p>
-                    <p>The workflow included <strong>data preprocessing</strong>, remote sensing data organization, and model fine-tuning for semantic segmentation. I used <strong>SegFormer</strong> as the core segmentation model to perform crop identification and land parcel delineation, leveraging its transformer-based architecture for effective multi-scale feature extraction and robust segmentation performance across heterogeneous agricultural scenes.</p>
-                    <p>Beyond model development, the project was integrated into a complete <strong>frontend-backend application workflow</strong>. The final system supported interactive visualization of original imagery and predicted parcel information through a <strong>curtain-style sliding comparison interface</strong>, making it easier to inspect segmentation quality and compare recognition results with the source remote sensing images.</p>
-                    <p>Overall, this work gave me practical experience in <strong>remote sensing data fusion</strong>, <strong>semantic segmentation model fine-tuning</strong>, and the engineering of an end-to-end application that connects geospatial AI models with usable visual analysis tools.</p>
                 </div>
             </section>
 
@@ -222,14 +235,16 @@
                             <span class="tag">PyTorch</span>
                             <span class="tag">Transformers</span>
                             <span class="tag">OpenWebUI</span>
+                            <span class="tag">Neo4j</span>
                             <span class="tag">Git</span>
                             <span class="tag">Linux</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Areas</h3>
+                        <h3>Research Areas</h3>
                         <div class="skill-tags">
                             <span class="tag">LLM</span>
+                            <span class="tag">RAG</span>
                             <span class="tag">Multimodal AI</span>
                             <span class="tag">Computer Vision</span>
                             <span class="tag">Remote Sensing</span>
