@@ -307,6 +307,23 @@ p {
     font-size: 0.9rem;
 }
 
+.edu-summary {
+    margin-top: 0.45rem;
+    color: var(--text-light);
+    font-size: 0.92rem;
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+}
+
+.course-tag {
+    font-size: 0.76rem;
+}
+
 /* Publications */
 .pub-item {
     display: flex;
@@ -373,6 +390,10 @@ p {
     margin-bottom: 0.4rem;
 }
 
+.exp-header-meta {
+    flex: 1;
+}
+
 .section-lead {
     color: var(--text-light);
     font-size: 0.95rem;
@@ -396,11 +417,30 @@ p {
     font-weight: 600;
 }
 
+.exp-role {
+    font-size: 0.84rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
 .exp-date {
     font-size: 0.85rem;
     color: var(--text-light);
     font-weight: 500;
     white-space: nowrap;
+}
+
+.project-bullets {
+    padding-left: 1.15rem;
+    margin-top: 0.45rem;
+}
+
+.project-bullets li {
+    margin-bottom: 0.5rem;
+}
+
+.project-bullets li:last-child {
+    margin-bottom: 0;
 }
 
 .project-tags {
